@@ -373,7 +373,7 @@ def cli_main():
             )
         else:
             distributed_main(args.device_id, args)
-    elif args.distributed_world_size > 1:
+    elif args.distributed_world_size > 1 and False:
         # fallback for single node with multiple GPUs
         assert args.distributed_world_size <= torch.cuda.device_count()
         port = random.randint(10000, 20000)
@@ -389,6 +389,7 @@ def cli_main():
     else:
         # single GPU training
         main(args)
+
 
 
 if __name__ == '__main__':

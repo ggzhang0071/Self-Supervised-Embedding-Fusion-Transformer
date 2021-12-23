@@ -1,0 +1,8 @@
+fairseq
+hydra-core
+omegaconf
+numpy
+jupyter
+jupyterlab
+pandas
+sentence_transformers
